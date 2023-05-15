@@ -40,12 +40,12 @@ class _MyHomePageState extends State<MyHomePage> {
         onPageStarted: (String url) {},
         onPageFinished: (String url) {},
         onWebResourceError: (WebResourceError error) {},
-        onNavigationRequest: (NavigationRequest request) {
-          if (request.url.startsWith('https://oudz.ae/')) {
-            return NavigationDecision.prevent;
-          }
-          return NavigationDecision.navigate;
-        },
+        // onNavigationRequest: (NavigationRequest request) {
+        //   if (request.url.startsWith('https://oudz.ae/')) {
+        //     return NavigationDecision.prevent;
+        //   }
+        //   return NavigationDecision.navigate;
+        // },
       ),
     )
     ..loadRequest(Uri.parse('https://oudz.ae/'));
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: WebViewWidget(controller: controller),
+      body: SafeArea(child: WebViewWidget(controller: controller)),
     );
   }
 }
