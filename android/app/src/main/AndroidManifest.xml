@@ -2,7 +2,7 @@
     package="com.example.oudz_webview">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="oudz_webview"
+        android:label="oudz"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
